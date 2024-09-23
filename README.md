@@ -38,5 +38,17 @@ The data used in this analysis contains the following key variables:
 ### Objective
 To analyze the data and identify the top 1-2 opportunities for improving upfront pricing precision. The findings will be compiled into a business report that caters to both technical and business stakeholders.
 
-### Expected Output
-A 4-page business PDF report detailing the analysis, findings, and actionable recommendations to improve upfront pricing precision.
+### Result
+There is a negative correlation between price difference and both distance (-0.17) and duration (-0.16). This means that longer rides (in terms of distance and time) tend to have smaller discrepancies between upfront and metered prices.
+GPS confidence has a very weak correlation with price difference, implying it might not be a significant factor in pricing accuracy.
+Destination changes also show a weak negative correlation (-0.025) with price difference, indicating that it may have a minor impact on discrepancies.
+
+## Opportunities for Improvement:
+**Improve pricing models for short-distance rides:** The negative correlation with distance suggests that shorter rides tend to have greater price discrepancies. Focusing on improving the precision of pricing for these rides could help reduce surprises for customers.
+
+**Handle outliers more effectively:** There are a few extreme cases where the price discrepancy is exceptionally large. These could be investigated further to understand whether they stem from unusual circumstances (e.g., significant destination changes, technical errors) and addressed specifically in the pricing algorithm.
+
+
+**GPS Confidence = 1 (Good GPS):** The majority of rides with good GPS have a tighter distribution of price differences. This suggests more accurate upfront pricing.
+
+**GPS Confidence = 0 (Poor GPS):** Rides with poor GPS confidence tend to show more variability in price discrepancies, indicating that unreliable GPS signals can contribute to larger pricing errors.

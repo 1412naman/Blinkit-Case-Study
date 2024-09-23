@@ -1,0 +1,7 @@
+Order ID,Date,Customer Segment,Product Category,Product Sub-Category,Sales,Quantity,Discount,Profit,Region
+1001,2024-01-15,Consumer,Furniture,Chairs,500,2,0.1,70,East
+1002,2024-01-16,Corporate,Office Supplies,Binders,300,3,0.2,50,West
+1003,2024-01-17,Home Office,Technology,Laptops,1500,1,0.05,200,Central
+1004,2024-01-18,Consumer,Furniture,Tables,1000,1,0.15,150,South
+1005,2024-01-19,Corporate,Technology,Phones,800,2,0.1,100,East
+1006,2024-01-20,Home Office,Office Supplies,Paper,100,5,0.0,20,West

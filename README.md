@@ -1,41 +1,40 @@
 # Blinkit-Case-Study
-: Data Analysis
-The key aspect of ride-hailing (ex. Uber, Ola) is upfront pricing, which works in the following way:
-First, it predicts the price for a ride based on predicted distance and time. This price is what you see on the screen of the phone before ordering a ride. 
-Second, if the metered price based on actual distance and time differs a lot from the predicted one, the upfront price switches to the metered price.
-'A lot' means more than 20%. For example, suppose you want to make a ride that upfront price predicts a cost of $5. If the metered price is between $4 and $6, you will end up paying $5. You will end up paying something else if the metered price is anything less than $4 or more than $6.
-No customer likes surprises (especially when it comes to money!), that’s why a company always strives to improve our upfront pricing precision for our customers’ smooth journeys.
-In the attached file you will find sample data. Your task is to analyze this data and identify the top 1 to 2 opportunities that can help us improve upfront pricing precision. The expected output is a business PDF report (4 pages maximum).
-Assume that both business and technical people will read your results.
-Variables in the data:
-order_id_new, order_try_id_new:		id of an order
-calc_created:				time when the order was created
-metered_price, distance, duration:	actual price, distance and duration of a ride
-upfront_price:				promised to the rider price, based on predicted duration (predicted_duration) and
-					distance (predicted_distance)
-distance:				ride distance
-duration:				ride duration
-gps_confidence:				indicator for good GPS connection (1 - good one, 0 - bad one)
-entered_by:				who entered the address
-b_state:					state of a ride (finished implies that the ride was actually done)	
-dest_change_number:			number of destination changes by a rider and a driver. It includes the original input of
-					the destination by a rider. That is why the minimum value of it is 1
-predicted_distance:			predicted duration of a ride based on the pickup and dropoff points entered by the
-					rider requesting a car
-predicted duration:			predicted duration of a ride based on the pickup and dropoff points entered by the
-					rider requesting a car
-prediction_price_type:			internal variable for the type of prediction
-	a. upfront, prediction:		prediction happened before the ride
-	b. upfront_destination_changed:	prediction happened after rider changed destination during the ride
-change_reason_pricing:			indicates whose action triggered a change in the price prediction. If it is empty, it
-					means that either nobody changed the destination or that the change has not affected
-					the predicted price
-ticket_id_new:				id for customer support ticket
-device_token, device_token_new:	id for a device_token (empty for all the fields)
-rider_app_version:			app version of rider phone
-driver_app_version:			app version of driver phone
-driver_device_uid_new:			id for UID of a phone device
-device_name:				the name of the phone
-us_indicator:				whether a ride happens in US
-overpaid_ride_ticket:			indicator for a rider complaining about the overpaid ride
-fraud_score:				fraud score of a rider. The higher it is the more likely the rider will cheat
+
+Data Analysis: Upfront Pricing Precision for Ride-Hailing Services
+Project Overview
+This project focuses on analyzing the precision of upfront pricing in ride-hailing services (e.g., Uber, Ola). The goal is to identify key opportunities to improve the accuracy of upfront pricing to ensure a smoother customer experience and reduce instances of pricing surprises.
+
+Data Description
+The data used in this analysis contains the following key variables:
+
+order_id_new: ID of an order.
+order_try_id_new: ID of an attempt to complete an order.
+calc_created: Timestamp when the order was created.
+metered_price: The actual price based on distance and time.
+upfront_price: The price predicted and shown to the rider before the ride.
+distance: Actual distance of the ride.
+duration: Actual duration of the ride.
+gps_confidence: Indicator for GPS connection quality (1 - good, 0 - bad).
+entered_by: Indicates who entered the address.
+b_state: State of the ride (e.g., finished).
+dest_change_number: Number of destination changes made by the rider or driver.
+predicted_distance: Predicted distance based on pickup and dropoff points.
+predicted_duration: Predicted duration based on pickup and dropoff points.
+prediction_price_type: Type of price prediction:
+upfront, prediction: Prediction before the ride.
+upfront_destination_changed: Prediction after a destination change.
+change_reason_pricing: Reason for a change in the price prediction.
+ticket_id_new: Customer support ticket ID.
+device_token, device_token_new: Device token ID (empty for all fields).
+rider_app_version: App version on the rider’s phone.
+driver_app_version: App version on the driver’s phone.
+driver_device_uid_new: Device UID of the driver’s phone.
+device_name: Name of the device.
+us_indicator: Indicates whether the ride took place in the US.
+overpaid_ride_ticket: Indicator if the rider complained about overpaying.
+fraud_score: Rider's fraud score (the higher, the more likely to cheat).
+Objective
+To analyze the data and identify the top 1-2 opportunities for improving upfront pricing precision. The findings will be compiled into a business report that caters to both technical and business stakeholders.
+
+Expected Output
+A 4-page business PDF report detailing the analysis, findings, and actionable recommendations to improve upfront pricing precision.
